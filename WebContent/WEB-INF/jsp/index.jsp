@@ -17,6 +17,8 @@
 		<title>ProjetoPessoal</title>
 	
 		<link rel="stylesheet" type="text/css" href="<c:url value="/css/estilo.css"/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value="/css/jquery.mobile.css"/>">
+		<script src="<c:url value="/js/jquery.mobile.js"/>"></script>
 		<script src="<c:url value="/js/jquery.js"/>"></script>
 		<script src="<c:url value="/js/scripts.js"/>"></script>
 		
