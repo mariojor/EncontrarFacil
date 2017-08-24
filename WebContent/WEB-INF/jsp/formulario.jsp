@@ -27,18 +27,18 @@
 			<fieldset>
 
 				<!-- Form Name -->
-				<legend>Contact Us Today!</legend>
+				<legend>Cadastro</legend>
 
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">First Name</label>
+					<label class="col-md-4 control-label">Nome</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
 							</span> 
-							<input name="first_name" placeholder="First Name" class="form-control" type="text">
+							<input name="nome" placeholder="Nome" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -46,13 +46,13 @@
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">Last Name</label>
+					<label class="col-md-4 control-label">Telefone</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-user"></i>
 							</span> 
-							<input name="last_name" placeholder="Last Name" class="form-control" type="text">
+							<input name="telefone" placeholder="(99)99999-9999" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-envelope"></i>
 							</span> 
-							<input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+							<input name="email" placeholder="E-Mail" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -74,13 +74,13 @@
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">Phone #</label>
+					<label class="col-md-4 control-label">CPF</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-earphone"></i>
 							</span> 
-							<input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+							<input name="cpf" placeholder="999.999.999-99" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -88,13 +88,13 @@
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">Address</label>
+					<label class="col-md-4 control-label">Idade</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-home"></i>
 							</span> 
-							<input name="address" placeholder="Address" class="form-control" type="text">
+							<input name="idade" placeholder="Idade" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -102,13 +102,13 @@
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">City</label>
+					<label class="col-md-4 control-label">Cidade</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-home"></i>
 							</span> 
-							<input name="city" placeholder="city" class="form-control" type="text">
+							<input name="cidade" placeholder="Cidade" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -116,14 +116,14 @@
 				<!-- Select Basic -->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">State</label>
+					<label class="col-md-4 control-label">Estado</label>
 					<div class="col-md-4 selectContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-list"></i>
 							</span> 
-							<select name="state" class="form-control selectpicker">
-								<option value=" ">Please select your state</option>
+							<select name="estado" class="form-control selectpicker">
+								<option value=" ">Selecione seu estado</option>
 								<!-- falta lista -->
 							</select>
 						</div>
@@ -133,31 +133,18 @@
 				<!-- Text input-->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">Zip Code</label>
+					<label class="col-md-4 control-label">Codigo Postal</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-home"></i>
 							</span>
-							<input name="zip" placeholder="Zip Code" class="form-control" type="text">
+							<input name="codigoPostal" placeholder="99999-999" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
 
-				<!-- Text input-->
-				<div class="form-group">
-					<label class="col-md-4 control-label">Website or domain
-						name</label>
-					<div class="col-md-4 inputGroupContainer">
-						<div class="input-group"> <span class="input-group-addon">
-							<i class="glyphicon glyphicon-globe"></i>
-						</span>
-						 <input name="website" placeholder="Website or domain name" class="form-control" type="text">
-						</div>
-					</div>
-				</div>
-
-				<!-- radio checks -->
+				<!-- radio checks
 				<div class="form-group">
 					<label class="col-md-4 control-label">Do you have hosting?</label>
 					<div class="col-md-4">
@@ -172,26 +159,25 @@
 							</label>
 						</div>
 					</div>
-				</div>
+				</div>  -->
 
 				<!-- Text area -->
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">Project Description</label>
+					<label class="col-md-4 control-label">Sobre você</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-pencil"></i>
 							</span>
-							<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+							<textarea class="form-control" name="comment" placeholder="Sobre você"></textarea>
 						</div>
 					</div>
 				</div>
 
 				<!-- Success message -->
 				<div class="alert alert-success" role="alert" id="success_message">
-					Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for
-					contacting us, we will get back to you shortly.
+					Sucesso <i class="glyphicon glyphicon-thumbs-up"></i> Sejá bem vindo!!!.
 				</div>
 
 				<!-- Button -->
@@ -199,7 +185,7 @@
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-4">
 						<button type="submit" class="btn btn-warning">
-							Send <span class="glyphicon glyphicon-send"></span>
+							Enviar <span class="glyphicon glyphicon-send"></span>
 						</button>
 					</div>
 				</div>

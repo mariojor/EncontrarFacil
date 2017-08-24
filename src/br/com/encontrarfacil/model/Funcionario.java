@@ -16,8 +16,19 @@ public class Funcionario implements Serializable {
 	private Integer id;
 
 	private String nome;
+	
+	private String telefone;
 
+	private String cpf;
+	
 	private int idade;
+	
+	private String email;
+	
+	private String sobreVoce;
+	
+	private Endereco endereco;
+	
 
 	public Funcionario() {
 	}
@@ -52,40 +63,45 @@ public class Funcionario implements Serializable {
 		this.idade = idade;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		result = prime * result + idade;
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		return result;
+	public String getCpf() {
+		return cpf;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Funcionario other = (Funcionario) obj;
-		if (id != other.id)
-			return false;
-		if (idade != other.idade)
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
-		return true;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
-	@Override
-	public String toString() {
-		return "Funcionario [id=" + id + ", nome=" + nome + ", idade=" + idade + "]";
+	public String getTelefone() {
+		return telefone;
 	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSobreVoce() {
+		return sobreVoce;
+	}
+
+	public void setSobreVoce(String sobreVoce) {
+		this.sobreVoce = sobreVoce;
+	}
+	
 
 }

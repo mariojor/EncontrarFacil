@@ -3,6 +3,7 @@
 	<persistence-unit name="EncontrarFacil">
 	
 	<class>br.com.encontrarfacil.model.Funcionario</class>
+	<class>br.com.encontrarfacil.model.Endereco</class>
 
         <properties>
             <!-- Propriedades JDBC -->

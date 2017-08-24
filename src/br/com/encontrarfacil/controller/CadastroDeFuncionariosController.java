@@ -2,18 +2,18 @@ package br.com.encontrarfacil.controller;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.encontrarfacil.fachada.Fachada;
+import br.com.encontrarfacil.fachada.IFachada;
 import br.com.encontrarfacil.model.Funcionario;
-import br.com.encontrarfacil.util.FabricaDeConexoesSingleton;
 
 @Controller
 public class CadastroDeFuncionariosController {
+	
+	IFachada fachada = Fachada.getInstancia(); 
 
 	@RequestMapping("/show")
 	public String show() {
@@ -31,9 +31,6 @@ public class CadastroDeFuncionariosController {
 	@RequestMapping("/cadastroDeFuncionario")
 	public String cadastroDeFuncionario(Model mv, Funcionario funcionario) {
 
-		System.out.println(funcionario.getIdade());
-		System.out.println(funcionario.getNome());
-
 		cadastrar(funcionario);
 
 		List<Funcionario> listaComFuncionarios = getLista();
@@ -47,22 +44,13 @@ public class CadastroDeFuncionariosController {
 	}
 
 	private List<Funcionario> getLista() {
-		EntityManager em = FabricaDeConexoesSingleton.getInstance();
 		
-		em.getTransaction().begin();
-		
-		TypedQuery<Funcionario> query = em.createQuery("SELECT f FROM Funcionario f",Funcionario.class);
-		return  query.getResultList();
+		return  fachada.listarTodosUsuarios();
 	}
 
 	private void cadastrar(Funcionario funcionario) {
 
-		EntityManager em = FabricaDeConexoesSingleton.getInstance();
-
-		  em.getTransaction().begin();
-		  em.persist(funcionario);
-		  em.getTransaction().commit();
-
+		fachada.cadastrar(funcionario);
 
 	}
 
