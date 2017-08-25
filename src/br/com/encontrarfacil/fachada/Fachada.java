@@ -24,7 +24,7 @@ public class Fachada implements IFachada {
 		try {
 			dao.cadastrar(funcionario);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		
 	}

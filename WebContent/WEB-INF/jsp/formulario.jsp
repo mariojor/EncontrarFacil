@@ -161,7 +161,7 @@
 					</div>
 				</div>  -->
 
-				<!-- Text area -->
+				<!-- Text area 
 
 				<div class="form-group">
 					<label class="col-md-4 control-label">Sobre você</label>
@@ -173,7 +173,7 @@
 							<textarea class="form-control" name="comment" placeholder="Sobre você"></textarea>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Success message -->
 				<div class="alert alert-success" role="alert" id="success_message">

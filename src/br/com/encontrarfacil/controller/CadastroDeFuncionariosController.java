@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.encontrarfacil.fachada.Fachada;
 import br.com.encontrarfacil.fachada.IFachada;
+import br.com.encontrarfacil.model.Endereco;
 import br.com.encontrarfacil.model.Funcionario;
 
 @Controller
@@ -23,15 +24,14 @@ public class CadastroDeFuncionariosController {
 
 	@RequestMapping("/formulario")
 	public String formulario() {
-		System.out.println("Executando a lógica com Spring MVC");
 		return "formulario";
 
 	}
 
 	@RequestMapping("/cadastroDeFuncionario")
-	public String cadastroDeFuncionario(Model mv, Funcionario funcionario) {
+	public String cadastroDeFuncionario(Model mv, Funcionario funcionario, Endereco endereco) {
 
-		cadastrar(funcionario);
+		cadastrar(funcionario, endereco);
 
 		List<Funcionario> listaComFuncionarios = getLista();
 
@@ -48,8 +48,14 @@ public class CadastroDeFuncionariosController {
 		return  fachada.listarTodosUsuarios();
 	}
 
-	private void cadastrar(Funcionario funcionario) {
+	private void cadastrar(Funcionario funcionario, Endereco endereco) {
 
+		Endereco end = new Endereco();
+		end.setCidade(endereco.getCidade());
+		end.setCodigoPostal(endereco.getCodigoPostal());
+		
+		funcionario.setEndereco(end);
+		
 		fachada.cadastrar(funcionario);
 
 	}

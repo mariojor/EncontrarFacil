@@ -4,32 +4,35 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Endereco implements Serializable{
+public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue
-	private Integer id;
-	
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idEndereco;
+
 	private String cidade;
-	
+
 	private String estado;
 
 	private String codigoPostal;
 
+	private Funcionario funcionario;
+
 	public Endereco() {
 	}
-	
-	public Integer getId() {
-		return id;
+
+	public int getIdEndereco() {
+		return idEndereco;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdEndereco(int idEndereco) {
+		this.idEndereco = idEndereco;
 	}
 
 	public String getCidade() {
@@ -56,47 +59,12 @@ public class Endereco implements Serializable{
 		this.codigoPostal = codigoPostal;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
-		result = prime * result + ((codigoPostal == null) ? 0 : codigoPostal.hashCode());
-		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
+	public Funcionario getFuncionario() {
+		return funcionario;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Endereco other = (Endereco) obj;
-		if (cidade == null) {
-			if (other.cidade != null)
-				return false;
-		} else if (!cidade.equals(other.cidade))
-			return false;
-		if (codigoPostal == null) {
-			if (other.codigoPostal != null)
-				return false;
-		} else if (!codigoPostal.equals(other.codigoPostal))
-			return false;
-		if (estado == null) {
-			if (other.estado != null)
-				return false;
-		} else if (!estado.equals(other.estado))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
 
 }

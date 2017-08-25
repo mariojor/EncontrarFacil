@@ -15,7 +15,6 @@ public class FabricaDeConexoesSingleton {
 	public static EntityManager getInstance() {
 		if(em == null) {
 			EntityManagerFactory emf = Persistence.createEntityManagerFactory("EncontrarFacil");
-			
 			em =  emf.createEntityManager();
 		}
 		

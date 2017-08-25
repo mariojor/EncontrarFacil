@@ -20,6 +20,15 @@
 		</init-param>
 	</servlet>
 	
+	 <servlet>
+        <servlet-name>webTierEntryPoint</servlet-name>
+        <servlet-class>com.sun.j2ee.blueprints.waf.controller.web.MainServlet</servlet-class>
+        <init-param>
+            <param-name>default_locale</param-name>
+            <param-value>en_US</param-value>
+        </init-param>
+    </servlet>
+	
 	<servlet-mapping>
 		<servlet-name>spring mvc</servlet-name>
 		<url-pattern>/</url-pattern>

@@ -9,8 +9,6 @@ import br.com.encontrarfacil.model.Funcionario;
 import br.com.encontrarfacil.util.FabricaDeConexoesSingleton;
 
 public class CadastroDAO {
-
-	
 	
 	/**
 	 * Cadastro de novos funcionarios
@@ -25,6 +23,8 @@ public class CadastroDAO {
 		em.getTransaction().begin();
 		em.persist(funcionario);
 		em.getTransaction().commit();
+		
+		em.close();
 
 	}
 	
@@ -40,7 +40,10 @@ public class CadastroDAO {
 		em.getTransaction().begin();
 		
 		TypedQuery<Funcionario> query = em.createQuery("SELECT f FROM Funcionario f",Funcionario.class);
+		
 		return  query.getResultList();
+		
+		
 	}
 
 }

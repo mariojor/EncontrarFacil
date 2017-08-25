@@ -2,9 +2,12 @@ package br.com.encontrarfacil.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -13,44 +16,38 @@ public class Funcionario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue
-	private Integer id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int idFuncionario;
 
 	private String nome;
-	
+
 	private String telefone;
 
 	private String cpf;
-	
+
 	private int idade;
-	
+
 	private String email;
-	
+
 	private String sobreVoce;
-	
-	@OneToOne
+
+	@OneToOne(cascade = CascadeType.ALL, optional = true)
+	@JoinColumn(name = "endereco_id") 
 	private Endereco endereco;
-	
 
 	public Funcionario() {
-	}
-
-	public Funcionario(Integer id, String nome, int idade) {
-		this.id = id;
-		this.nome = nome;
-		this.idade = idade;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public Integer getId() {
-		return id;
+	public int getIdFuncionario() {
+		return idFuncionario;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdFuncionario(int idFuncionario) {
+		this.idFuncionario = idFuncionario;
 	}
 
 	public void setNome(String nome) {
@@ -104,6 +101,5 @@ public class Funcionario implements Serializable {
 	public void setSobreVoce(String sobreVoce) {
 		this.sobreVoce = sobreVoce;
 	}
-	
 
 }
